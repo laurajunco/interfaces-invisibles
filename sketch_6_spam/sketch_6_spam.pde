@@ -1,13 +1,18 @@
-Ventana v;
-
-Ventana ventana;
+Ventana[] ventanas;
+int numVentanas = 5;
 
 void setup() {
   size(100, 100);
   surface.setVisible(false);
-  v = new Ventana();   
+  ventanas = new Ventana[numVentanas];
+  
+  for(int i = 0; i < numVentanas; i++) {
+    ventanas[i] = new Ventana();
+  }  
 }
 
 void draw() {
-  v.bounce();
+  for(int i = 0; i < numVentanas; i++) {
+    ventanas[i].bounce();
+  } 
 }

@@ -12,7 +12,7 @@ class Ventana extends Frame {
     w = 80;
     h = 80;
     ubicacion = new PVector(0, 0);
-    velocidad = new PVector(7, 8);
+    velocidad = new PVector(5, 5);
     ubicacion.x = random(displayWidth - w);
     ubicacion.y = random(displayHeight - h);
     
@@ -36,7 +36,7 @@ class Ventana extends Frame {
         velocidad.x *= -1;
       }
       
-      if ( ubicacion.y > displayHeight  - h ) {
+      if ( ubicacion.y > displayHeight - h || ( ubicacion.y < 0 )) {
         velocidad.y *= -1; 
       }
       
