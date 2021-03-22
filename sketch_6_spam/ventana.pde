@@ -11,7 +11,7 @@ class Ventana extends Frame {
   Ventana() {
     w = 80;
     h = 80;
-    ubicacion = new PVector(x, y);
+    ubicacion = new PVector(0, 0);
     velocidad = new PVector(7, 8);
     ubicacion.x = random(displayWidth - w);
     ubicacion.y = random(displayHeight - h);
